@@ -1001,7 +1001,7 @@ body {
     border-radius: 50%;
     border: 2px solid rgba(200, 187, 148, 0.6);
     background:
-        url('img/star-icon.png'),
+        url('img/star-icon.webp'),
         radial-gradient(circle at 50% 50%, #1a1919 0%, #0e0d0d 70%);
     box-shadow: inset 10px 0 20px rgba(200, 187, 148, 0.2);
     background-size: 70%;
