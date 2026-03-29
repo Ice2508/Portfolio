@@ -17,8 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateAboutImg);
     window.addEventListener('resize', updateArrowPosition);
     const starField = document.getElementById('star-field');
-    const starCount = window.innerWidth < 800 ? 300 : 800;
-    createStars(starField); 
+    let starCount;
+    if (window.innerWidth < 640) {
+      starCount = 250;
+    } else if (window.innerWidth < 960) {
+      starCount = 400;
+    } else {
+      starCount = 800;
+    }
+    createStars(starField, starCount); 
     popupOpenFn(openPopup); 
     popupClose(overlay);
     formSubmit(popupSubmit);
