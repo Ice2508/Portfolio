@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateAboutImg);
     window.addEventListener('resize', updateArrowPosition);
     const starField = document.getElementById('star-field');
+    const starCount = window.innerWidth < 800 ? 600 : 800;
     createStars(starField); 
     popupOpenFn(openPopup); 
     popupClose(overlay);
@@ -81,7 +82,7 @@ function updateVideoSource(direction) {
         player.source = { type: 'video', sources:[{ src: videoSrc[index].path, type:'video/mp4' }]};
         descriptionList.innerHTML = videoSrc[index].text.map(el=>`<li class="portfolio__descriptions-item">${el}</li>`).join('');
         descriptionList.classList.remove('fade-out');
-    },500);
+    }, 500);
 }
 
 function popupOpenFn(btns){
@@ -145,7 +146,7 @@ function popupInterfaceReset(popupSubmit) {
 
 function createStars(starField, starCount=800){
     const starTypes=['#star-sm','#star-md','#star-lg'];
-    for(let i=0;i<starCount;i++){
+    for (let i=0; i < starCount; i++){
         const star=document.createElementNS("http://www.w3.org/2000/svg","use");
         const type=starTypes[Math.floor(Math.random()*starTypes.length)];
         const x=Math.random()*1000;
@@ -160,7 +161,7 @@ function createStars(starField, starCount=800){
 }
 
 function formSubmit(popupSubmit){
-    popupSubmit.addEventListener('submit', async (e)=>{
+    popupSubmit.addEventListener('submit', async (e) => {
         e.preventDefault();
         if(!formValidator(popupSubmit)) return;
         const btn = popupSubmit.querySelector('.popup-submit__btn');
@@ -230,9 +231,9 @@ function backPopup() {
 
 function updateAboutImg () {
   if  (window.matchMedia('(max-width: 1110px)').matches) {
-      aboutImg.src = 'img/22-mob.png';
+      aboutImg.src = 'img/22-mob.webp';
    } else {
-      aboutImg.src = 'img/22.png';
+      aboutImg.src = 'img/22.webp';
    }  
 }
 

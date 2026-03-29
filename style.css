@@ -54,7 +54,7 @@ button {
 }
 
 body {
-    background: #000 url('fon4.png') no-repeat center center fixed;
+    background: #000 url('fon4.webp') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     position: relative;
@@ -636,7 +636,7 @@ body {
     width: 28%;
     z-index: 1;
     clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
-    background-image: url(img/work1.png);
+    background-image: url(img/work1.webp);
     background-size: cover;
     background-position: bottom;
 }
@@ -647,7 +647,7 @@ body {
     transform: scale(1.1) translateZ(50px);
     z-index: 2;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-image: url(img/work2.png);
+    background-image: url(img/work2.webp);
     background-size: cover;
 }
 
@@ -655,7 +655,7 @@ body {
     width: 31%;
     clip-path: polygon(73% 5%, 100% 0%, 100% 81%, 54% 90%, 0% 100%, 0% 16%, 41% 10%);
     transform: scale(1.08) translateZ(50px);
-    background-image: url(img/work3.png);
+    background-image: url(img/work3.webp);
     background-size: cover;
     background-position: left left;
 }
