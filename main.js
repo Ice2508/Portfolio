@@ -14,8 +14,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log(aboutImg);
     updateAboutImg(); 
-    window.addEventListener('resize', updateAboutImg);
-    window.addEventListener('resize', updateArrowPosition);
+    
     const starField = document.getElementById('star-field');
     let starCount;
     if (window.innerWidth < 640) {
