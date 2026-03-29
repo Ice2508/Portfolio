@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateAboutImg);
     window.addEventListener('resize', updateArrowPosition);
     const starField = document.getElementById('star-field');
-    const starCount = window.innerWidth < 800 ? 600 : 800;
+    const starCount = window.innerWidth < 800 ? 300 : 800;
     createStars(starField); 
     popupOpenFn(openPopup); 
     popupClose(overlay);
