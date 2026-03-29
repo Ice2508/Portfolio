@@ -153,11 +153,11 @@ function popupInterfaceReset(popupSubmit) {
 
 function createStars(starField, starCount=800){
     const starTypes=['#star-sm','#star-md','#star-lg'];
-    for (let i=0; i < starCount; i++){
-        const star=document.createElementNS("http://www.w3.org/2000/svg","use");
-        const type=starTypes[Math.floor(Math.random()*starTypes.length)];
-        const x=Math.random()*1000;
-        const y=Math.random()*1000;
+    for (let i= 0; i < starCount; i++){
+        const star = document.createElementNS("http://www.w3.org/2000/svg","use");
+        const type = starTypes[Math.floor(Math.random() * starTypes.length)];
+        const x= Math.random() * 1000;
+        const y= Math.random() * 1000;
         star.setAttributeNS("http://www.w3.org/1999/xlink","href",type);
         star.setAttribute("x",x);
         star.setAttribute("y",y);
