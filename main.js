@@ -14,11 +14,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log(aboutImg);
     updateAboutImg(); 
-    
+    window.addEventListener('resize', updateAboutImg);
+    window.addEventListener('resize', updateArrowPosition);
     const starField = document.getElementById('star-field');
     let starCount;
     if (window.innerWidth < 640) {
-      starCount = 230;
+      starCount = 0;
     } else if (window.innerWidth < 960) {
       starCount = 400;
     } else {
