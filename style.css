@@ -1351,7 +1351,13 @@ body::before {
 .star {
     transform-box: fill-box;
     transform-origin: center;
-    will-change: opacity, transform;
+    backface-visibility: hidden; 
+    perspective: 1000px; 
+}
+
+#star-field {
+    will-change: transform;
+    pointer-events: none;
 }
 
 @keyframes twinkle {
