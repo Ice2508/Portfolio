@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.css" />
+      <script src="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <script src="main.js" defer></script>
+   </head>
+   <body>
+      <div class="header__mobile-nav-overlay">
+         <nav class="header__mobile-nav-list">
+            <div class="header__mobile-nav-list-wrap">
+               <h3 class="header__mobile-nav-title">Меню</h3>
+               <button class="header__mobile-nav-close">&times;</button>
+            </div>
+            <ul class="header__nav-list mobile__nav--list">
+               <li class="header__nav-item">
+                  <a href="#about" class="header__nav-link">Обо мне</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#services" class="header__nav-link">Услуги</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#portfolio" class="header__nav-link">Примеры работ</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#cta" class="header__nav-link">Связаться со мной</a>
+               </li>
+            </ul>
+            <div class="header-mobile-nav__social">
+               <p>я в соц сетях:</p>
+               <div class="header-mobile-nav__social-wrap">
+                  <img class="header-mobile-nav__social-icon" src="img/vk-icon1.png" alt="">
+                  <img class="header-mobile-nav__social-icon" src="img/tg-icon1.png" alt="">
+                  <img class="header-mobile-nav__social-icon" src="img/mail-icon1.png" alt="">
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div class="popup-overlay">
+         <form action="" class="popup-submit">
+            <button class="popup-submit__close" type="button">&times;</button>
+            <h3 class="popup-submit__title">Связаться со мной</h3>
+            <input class="popup-submit__input" name="name" type="text" placeholder="имя">
+            <input class="popup-submit__input" name="contacts" type="text" placeholder="контактные данные">
+            <textarea class="popup-submit__textarea" name="message" placeholder="сообщение"></textarea>
+            <button class="popup-submit__btn" type="submit">отправить</button>
+         </form>
+      </div>
+      <div id="wrap" class="wrap-animation">
+         <svg id="star-field" class="stars-fixed" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <radialGradient id="y">
+                  <stop offset="0%" stop-color="#fff9c4" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#fff9c4" stop-opacity="0" />
+               </radialGradient>
+               <circle id="star-sm" r="1.2" fill="url(#y)" />
+               <circle id="star-md" r="1.8" fill="url(#y)" />
+               <circle id="star-lg" r="2.5" fill="url(#y)" />
+            </defs>
+         </svg>
+      </div>
+      <div class="wrap">
+         <header class="header">
+            <div class="header__mobile-wrap">
+               <div class="header__mobile-nav"></div>
+               <p class="header__author">Lux<span>Dev</span></p>
+            </div>
+            <nav class="header__nav">
+               <ul class="header__nav-list header__nav-list--mob">
+                  <li class="header__nav-item">
+                     <a href="#about" class="header__nav-link">Обо мне</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a href="#services" class="header__nav-link">Услуги</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a href="#portfolio" class="header__nav-link">Примеры работ</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a href="#cta" class="header__nav-link">Связаться со мной</a>
+                  </li>
+               </ul>
+            </nav>
+            <button class="header__button open--popup">Связаться</button>
+         </header>
+         <section class="hero">
+            <h1 class="hero__title">Современные веб&#8209;продукты</h1>
+            <p class="hero__subtitle">от концепции до рабочего решения</p>
+            <svg class="hero__subtitle-arc" width="100%" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+               <path id="slogan-curve" d="M 20 20 Q 250 100 480 20" fill="transparent"/>
+               <text fill="#ebcb9b" text-anchor="middle">
+                  <textPath href="#slogan-curve" startOffset="50%">
+                     от концепции до рабочего решения
+                  </textPath>
+               </text>
+            </svg>
+            <div class="hero__prewiev">
+               <div class="hero__prewiev-works hero__prewiev-works--left"></div>
+               <div class="hero__prewiev-works hero__prewiev-works--center"></div>
+               <div class="hero__prewiev-works hero__prewiev-works--right"></div>
+            </div>
+         </section>
+         <section class="stack">
+            <div class="stack__icon-wrap">
+               <img src="img/html-icon3.png" alt="html" class="stack__icon">
+            </div>
+            <div class="stack__icon-wrap">
+               <img src="img/css-icon1.png" alt="css" class="stack__icon">
+            </div>
+            <div class="stack__icon-wrap">
+               <img src="img/js-icon1.png" alt="javascript" class="stack__icon stack__icon--mod">
+            </div>
+            <div class="stack__icon-wrap">
+               <img src="img/react-icon1.png" alt="react" class="stack__icon stack__icon--mod">
+            </div>
+            <div class="stack__icon-wrap">
+               <img src="img/strapi-icon1.png" alt="strapi" class="stack__icon">
+            </div>
+         </section>
+         <section id="about" class="about">
+            <h2 class="about__title section--title">Обо мне</h2>
+            <div class="about__info-wrap">
+               <div class="about__info about--block">
+                  <div class="about__decor"></div>
+                  <div class="about__line"></div>
+                  <p>Более <strong>5 лет</strong> я занимаюсь проектированием и разработкой цифровых решений, за это время мной было реализовано свыше <strong>40 успешных проектов</strong> различной сложности.</p>
+                  <p>Мой основной стек — <strong>React</strong> для создания динамичных интерфейсов и <strong>Strapi</strong> для построения гибкой логики бэкенда. Такой подход гарантирует высокую скорость работы и легкость масштабирования вашего продукта.</p>
+                  <p>Кроме веб-разработки, я занимаюсь созданием мобильных приложений для <strong>Android</strong> на базе современных веб-технологий. Это позволяет в кратчайшие сроки адаптировать ваш продукт под мобильные устройства, сохраняя производительность и единую логику работы.</p>
+                  <p>В зависимости от задач, проект может быть дополнен <strong>индивидуальной панелью управления</strong>.</p>
+                  <p>Я беру на себя весь цикл запуска: от настройки <strong>безопасности и SSL-сертификатов</strong> до интеграции <strong>систем аналитики</strong>, предоставляя вам полностью готовый к работе продукт <strong>«под ключ»</strong>.</p>
+               </div>
+               <div class="about__img-wrap about--block">
+                  <div class="about__decor2"></div>
+                  <img class="about__img" alt="">
+               </div>
+            </div>
+         </section>
+         <section id="services" class="services">
+            <h2 class="services__title section--title">Услуги</h2>
+            <div class="services__bloks">
+               <div class="services__block">
+                  <div class="services__block-icon-wrap">
+                     <img src="img/services-icon1.png" alt="" class="services__block-icon">
+                  </div>
+                  <div class="services__block-info">
+                     <h3 class="services__block-title">
+                        Разработка Landing&nbsp;Page
+                     </h3>
+                     <p class="services__block-text">
+                        Создание эффективных посадочных страниц с уникальным дизайном, нацеленных на результат и продажи.
+                     </p>
+                  </div>
+               </div>
+               <div class="services__block services__block--mod">
+                  <div class="services__block-icon-wrap">
+                     <img src="img/services-icon2.png" alt="" class="services__block-icon">
+                  </div>
+                  <div class="services__block-info">
+                     <h3 class="services__block-title">
+                        E-commerce и корпоративные сайты
+                     </h3>
+                     <p class="services__block-text">
+                        Масштабируемые интернет магазины, а так же  корпоративные сайты для компаний, готовые к высоким нагрузкам.
+                     </p>
+                  </div>
+               </div>
+               <div class="services__block">
+                  <div class="services__block-icon-wrap">
+                     <img src="img/services-icon3.png" alt="" class="services__block-icon">
+                  </div>
+                  <div class="services__block-info">
+                     <h3 class="services__block-title">
+                        Андроид приложения
+                     </h3>
+                     <p class="services__block-text">
+                        Веб-продукты, упакованные в apk, с удобным и понятным интерфейсом, продуманной навигацией и функционалом.
+                     </p>
+                  </div>
+               </div>
+               <div class="services__block services__block--mod">
+                  <div class="services__block-icon-wrap">
+                     <img src="img/services-icon4.png" alt="" class="services__block-icon">
+                  </div>
+                  <div class="services__block-info">
+                     <h3 class="services__block-title">
+                        Кастомные админ панели
+                     </h3>
+                     <p class="services__block-text">
+                        Разработка гибких и понятных систем управления контентом и данными на базе Strapi, под конкретные бизнесс процессы.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="portfolio" class="portfolio">
+            <h2 class="portfolio__title section--title">Примеры работ</h2>
+            <div class="portfolio__video-block">
+               <button class="portfolio__controls portfolio__controls--left">
+                 <svg class="portfolio__left-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="arrowGlowGoldRight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- glow line -->
+  <path
+    d="M14 35 H50"
+    stroke="#D8B97A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    opacity="0.18"
+    filter="url(#arrowGlowGoldRight)"
+  />
+
+  <!-- glow arrow head -->
+  <path
+    d="M41 28 L54 35 L41 42"
+    stroke="#D8B97A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.18"
+    filter="url(#arrowGlowGoldRight)"
+  />
+
+  <!-- main line -->
+  <path
+    d="M14 35 H50"
+    stroke="#E7C987"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  />
+
+  <!-- main arrow head -->
+  <path
+    d="M41 28 L54 35 L41 42"
+    stroke="#E7C987"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+                  <svg class="portfolio__left-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <defs>
+                        <filter id="arrowGlowUniversal" x="-50%" y="-50%" width="200%" height="200%">
+                           <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                        </filter>
+                     </defs>
+                     <!-- glow outer -->
+                     <path
+                        d="M27 14 L51 35 L27 56"
+                        stroke="#D8B97A"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        opacity="0.28"
+                        filter="url(#arrowGlowUniversal)"
+                        />
+                     <!-- glow inner -->
+                     <path
+                        d="M18 19 L36 35 L18 51"
+                        stroke="#D8B97A"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        opacity="0.22"
+                        filter="url(#arrowGlowUniversal)"
+                        />
+                     <!-- outer -->
+                     <path
+                        d="M27 14 L51 35 L27 56"
+                        stroke="#E7C987"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                     <!-- inner -->
+                     <path
+                        d="M18 19 L36 35 L18 51"
+                        stroke="#E7C987"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                  </svg>
+               </button>
+               <div class="portfolio__player-wrap">
+                  <video id="player" class="portfolio__player" poster="img/poster.png">
+                     <source class="portfolio__player-source" src="video.mp4" type="video/mp4">
+                  </video>
+                  <ul class="portfolio__descriptions-list">
+                     <li class="portfolio__descriptions-item">Разработал современный продающий интерфейс с акцентом на визуальное доверие, удобную навигацию и сильную подачу продукта.</li>
+                     <li class="portfolio__descriptions-item">Реализовал адаптивную frontend-разработку для стабильной и корректной работы сайта на всех устройствах</li>
+                     <li class="portfolio__descriptions-item">Продумал пользовательский сценарий и структуру блоков, что позволило повысить вовлечённость и улучшить конверсию.</li>
+                     <li class="portfolio__descriptions-item">Интегрировал необходимый функционал проекта: формы заявок, анимации, интерактивные элементы и административную логику.</li>
+                  </ul>
+               </div>
+               <button class="portfolio__controls portfolio__controls--right">
+                 <svg class="portfolio__right-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="arrowGlowGoldRight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- glow line -->
+  <path
+    d="M14 35 H50"
+    stroke="#D8B97A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    opacity="0.18"
+    filter="url(#arrowGlowGoldRight)"
+  />
+
+  <!-- glow arrow head -->
+  <path
+    d="M41 28 L54 35 L41 42"
+    stroke="#D8B97A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.18"
+    filter="url(#arrowGlowGoldRight)"
+  />
+
+  <!-- main line -->
+  <path
+    d="M14 35 H50"
+    stroke="#E7C987"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  />
+
+  <!-- main arrow head -->
+  <path
+    d="M41 28 L54 35 L41 42"
+    stroke="#E7C987"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+                  <svg class="portfolio__right-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <defs>
+                        <filter id="arrowGlowUniversal" x="-50%" y="-50%" width="200%" height="200%">
+                           <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                        </filter>
+                     </defs>
+                     <!-- glow outer -->
+                     <path
+                        d="M27 14 L51 35 L27 56"
+                        stroke="#D8B97A"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        opacity="0.28"
+                        filter="url(#arrowGlowUniversal)"
+                        />
+                     <!-- glow inner -->
+                     <path
+                        d="M18 19 L36 35 L18 51"
+                        stroke="#D8B97A"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        opacity="0.22"
+                        filter="url(#arrowGlowUniversal)"
+                        />
+                     <!-- outer -->
+                     <path
+                        d="M27 14 L51 35 L27 56"
+                        stroke="#E7C987"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                     <!-- inner -->
+                     <path
+                        d="M18 19 L36 35 L18 51"
+                        stroke="#E7C987"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                  </svg>
+               </button>
+            </div>
+         </section>
+         <section id="cta" class="cta">
+            <h2 class="cta__title section--title">Готовы начать проект?</h2>
+            <p class="cta__text">создадим что-то выдающееся вместе</p>
+            <button class="cta-button open--popup">Связаться со мной</button>
+         </section>
+         <footer class="footer">
+            <div class="footer__content">
+               <div class="footer__content-autor">
+                  <div class="footer__content-autor-wrap">
+                     <img class ="footer__content-autor-icon" src="img/footer-icon.png">
+                     <p class="footer__content-autor-title">Lux<span>Dev</span></p>
+                  </div>
+               </div>
+               <nav class="footer__content-nav">
+                  <ul class="header__nav-list footer__nav-list">
+                     <li class="header__nav-item">
+                        <a href="#about" class="header__nav-link">Обо мне</a>
+                     </li>
+                     <li class="header__nav-item">
+                        <a href="#services" class="header__nav-link">Услуги</a>
+                     </li>
+                     <li class="header__nav-item">
+                        <a href="#portfolio" class="header__nav-link">Примеры работ</a>
+                     </li>
+                     <li class="header__nav-item">
+                        <a href="#cta" class="header__nav-link">Связаться со мной</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="footer__content-contacts">
+                  <div class="footer__content-contacts-wrap">
+                     <div>
+                        <img class="footer__icon" src="img/mail-icon1.png">
+                        <div>Ice2508@yandex.ru</div>
+                     </div>
+                     <div>
+                        <img class="footer__icon" src="img/vk-icon1.png">
+                        <div>вконтакте</div>
+                     </div>
+                     <div>
+                        <img class="footer__icon" src="img/tg-icon1.png">
+                        <div>@ice2508</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copyright">
+               &#169; 2026 LuxDev. Все права защищены.
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
