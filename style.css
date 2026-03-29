@@ -1767,6 +1767,16 @@ body::before {
     }
 }
    @media (max-width: 600px) {
+        #star-sm { 
+            r: 2.5; 
+        }
+        #star-md { 
+            r: 3.6; 
+        }
+        #star-lg { 
+            r: 5; 
+        }
+       
        .section--title {
          font-size: 37px;
        }
