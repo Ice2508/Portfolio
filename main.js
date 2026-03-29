@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const starField = document.getElementById('star-field');
     let starCount;
     if (window.innerWidth < 640) {
-      starCount = 250;
+      starCount = 230;
     } else if (window.innerWidth < 960) {
       starCount = 400;
     } else {

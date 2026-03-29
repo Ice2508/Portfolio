@@ -54,7 +54,7 @@ button {
 }
 
 body {
-    background: #000 url('fon4.webp') no-repeat center center fixed;
+    background: #000 url('fon.webp') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     position: relative;
