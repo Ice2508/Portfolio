@@ -3,13 +3,26 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.css" />
-      <script src="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.min.js"></script>
+      <meta name="description" content="Современные веб-продукты: разработка, дизайн и digital-решения для бизнеса.">
+      <title>Современные веб-продукты</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.css">
+      <script src="https://cdn.jsdelivr.net/npm/plyr@latest/dist/plyr.min.js" defer></script>
       <link rel="stylesheet" href="style.css">
+      <link rel="icon" href="img/favicon.ico" sizes="any">
+      <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <meta name="robots" content="noindex, nofollow">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Современные веб-продукты">
+      <meta property="og:description" content="Разработка современных веб-продуктов: сайты, интерфейсы и digital-решения.">
+      <meta property="og:url" content="https://ice2508.github.io/luxDev">
+      <meta property="og:image" content="img/og.jpg">
+      <meta property="og:site_name" content="Современные веб-продукты">
+      <meta property="og:locale" content="ru_RU">
+      <meta name="theme-color" content="#000000">
       <script src="main.js" defer></script>
    </head>
    <body>
@@ -17,7 +30,7 @@
          <nav class="header__mobile-nav-list">
             <div class="header__mobile-nav-list-wrap">
                <h3 class="header__mobile-nav-title">Меню</h3>
-               <button class="header__mobile-nav-close">&times;</button>
+               <button class="header__mobile-nav-close" aria-label="Закрыть меню">&times;</button>
             </div>
             <ul class="header__nav-list mobile__nav--list">
                <li class="header__nav-item">
@@ -33,23 +46,26 @@
                   <a href="#cta" class="header__nav-link">Связаться со мной</a>
                </li>
             </ul>
-            <div class="header-mobile-nav__social">
+            <address class="header-mobile-nav__social">
                <p>я в соц сетях:</p>
                <div class="header-mobile-nav__social-wrap">
-                  <img class="header-mobile-nav__social-icon" src="img/vk-icon1.png" alt="">
-                  <img class="header-mobile-nav__social-icon" src="img/tg-icon1.png" alt="">
-                  <img class="header-mobile-nav__social-icon" src="img/mail-icon1.png" alt="">
+                  <img class="header-mobile-nav__social-icon" src="img/vk-icon1.png" alt="Иконка ВКонтакте">
+                  <img class="header-mobile-nav__social-icon" src="img/tg-icon1.png" alt="Иконка Telegram">
+                  <img class="header-mobile-nav__social-icon" src="img/mail-icon1.png" alt="Иконка электронной почты">
                </div>
-            </div>
+            </address>
          </nav>
       </div>
       <div class="popup-overlay">
-         <form action="" class="popup-submit">
-            <button class="popup-submit__close" type="button">&times;</button>
+         <form class="popup-submit">
+            <button class="popup-submit__close" type="button" aria-label="Закрыть окно">&times;</button>
             <h3 class="popup-submit__title">Связаться со мной</h3>
-            <input class="popup-submit__input" name="name" type="text" placeholder="имя">
-            <input class="popup-submit__input" name="contacts" type="text" placeholder="контактные данные">
-            <textarea class="popup-submit__textarea" name="message" placeholder="сообщение"></textarea>
+            <label for="name" class="visually-hidden">Ваше имя</label>
+            <input id="name" class="popup-submit__input" name="name" type="text" placeholder="имя">
+            <label for="contacts" class="visually-hidden">Контактные данные</label>
+            <input id="contacts" class="popup-submit__input" name="contacts" type="text" placeholder="контактные данные">
+             <label for="message" class="visually-hidden">Сообщение</label>
+            <textarea id="message" class="popup-submit__textarea" name="message" placeholder="сообщение"></textarea>
             <button class="popup-submit__btn" type="submit">отправить</button>
          </form>
       </div>
@@ -69,7 +85,7 @@
       <div class="wrap">
          <header class="header">
             <div class="header__mobile-wrap">
-               <div class="header__mobile-nav"></div>
+               <button class="header__mobile-nav" aria-label="Открыть меню"></button>
                <p class="header__author">Lux<span>Dev</span></p>
             </div>
             <nav class="header__nav">
@@ -90,6 +106,7 @@
             </nav>
             <button class="header__button open--popup">Связаться</button>
          </header>
+         <main class="main">
          <section class="hero">
             <h1 class="hero__title">Современные веб&#8209;продукты</h1>
             <p class="hero__subtitle">от концепции до рабочего решения</p>
@@ -108,20 +125,21 @@
             </div>
          </section>
          <section class="stack">
+            <h2 class="visually-hidden">Стек технологий</h2>
             <div class="stack__icon-wrap">
-               <img src="img/html-icon3.webp" alt="html" class="stack__icon">
+               <img src="img/html-icon3.webp" alt="HTML" class="stack__icon">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/css-icon1.png" alt="css" class="stack__icon">
+               <img src="img/css-icon1.png" alt="CSS" class="stack__icon">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/js-icon1.png" alt="javascript" class="stack__icon stack__icon--mod">
+               <img src="img/js-icon1.png" alt="JavaScript" class="stack__icon stack__icon--mod">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/react-icon1.png" alt="react" class="stack__icon stack__icon--mod">
+               <img src="img/react-icon1.png" alt="React" class="stack__icon stack__icon--mod">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/strapi-icon1.png" alt="strapi" class="stack__icon">
+               <img src="img/strapi-icon1.png" alt="Strapi" class="stack__icon">
             </div>
          </section>
          <section id="about" class="about">
@@ -138,7 +156,14 @@
                </div>
                <div class="about__img-wrap about--block">
                   <div class="about__decor2"></div>
-                  <img class="about__img" alt="">
+                  <picture >
+   <!-- Если экран меньше 768px, браузер скачает только мобильную версию -->
+   <source media="(max-width: 1109px)" srcset="img/22-mob.webp">
+   
+   <!-- Если экран больше, загрузится десктопная. Она же служит фоллбэком (базой) -->
+   <img class="about__img" src="img/22.webp" alt="">
+</picture>
+                  
                </div>
             </div>
          </section>
@@ -147,7 +172,7 @@
             <div class="services__bloks">
                <div class="services__block">
                   <div class="services__block-icon-wrap">
-                     <img src="img/services-icon1.webp" alt="" class="services__block-icon">
+                     <img src="img/services-icon1.webp" alt="Иконка услуги разработки Landing Page" class="services__block-icon">
                   </div>
                   <div class="services__block-info">
                      <h3 class="services__block-title">
@@ -160,7 +185,7 @@
                </div>
                <div class="services__block services__block--mod">
                   <div class="services__block-icon-wrap">
-                     <img src="img/services-icon2.webp" alt="" class="services__block-icon">
+                     <img src="img/services-icon2.webp" alt="Иконка e-commerce и корпоративных сайтов" class="services__block-icon">
                   </div>
                   <div class="services__block-info">
                      <h3 class="services__block-title">
@@ -173,7 +198,7 @@
                </div>
                <div class="services__block">
                   <div class="services__block-icon-wrap">
-                     <img src="img/services-icon3.webp" alt="" class="services__block-icon">
+                     <img src="img/services-icon3.webp" alt="Иконка Android приложений" class="services__block-icon">
                   </div>
                   <div class="services__block-info">
                      <h3 class="services__block-title">
@@ -186,7 +211,7 @@
                </div>
                <div class="services__block services__block--mod">
                   <div class="services__block-icon-wrap">
-                     <img src="img/services-icon4.webp" alt="" class="services__block-icon">
+                     <img src="img/services-icon4.webp" alt="Иконка кастомных админ-панелей" class="services__block-icon">
                   </div>
                   <div class="services__block-info">
                      <h3 class="services__block-title">
@@ -199,204 +224,205 @@
                </div>
             </div>
          </section>
-         <section id="portfolio" class="portfolio">
-            <h2 class="portfolio__title section--title">Примеры работ</h2>
-            <div class="portfolio__video-block">
-               <button class="portfolio__controls portfolio__controls--left">
-                  <svg class="portfolio__left-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <filter id="arrowGlowGoldRight" x="-50%" y="-50%" width="200%" height="200%">
-                           <feGaussianBlur stdDeviation="1.4" result="blur"/>
-                        </filter>
-                     </defs>
-                     <!-- glow line -->
-                     <path
-                        d="M14 35 H50"
-                        stroke="#D8B97A"
-                        stroke-width="2.6"
-                        stroke-linecap="round"
-                        opacity="0.18"
-                        filter="url(#arrowGlowGoldRight)"
-                        />
-                     <!-- glow arrow head -->
-                     <path
-                        d="M41 28 L54 35 L41 42"
-                        stroke="#D8B97A"
-                        stroke-width="2.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.18"
-                        filter="url(#arrowGlowGoldRight)"
-                        />
-                     <!-- main line -->
-                     <path
-                        d="M14 35 H50"
-                        stroke="#E7C987"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        />
-                     <!-- main arrow head -->
-                     <path
-                        d="M41 28 L54 35 L41 42"
-                        stroke="#E7C987"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                  </svg>
-                  <svg class="portfolio__left-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <filter id="arrowGlowUniversal" x="-50%" y="-50%" width="200%" height="200%">
-                           <feGaussianBlur stdDeviation="2.5" result="blur"/>
-                        </filter>
-                     </defs>
-                     <!-- glow outer -->
-                     <path
-                        d="M27 14 L51 35 L27 56"
-                        stroke="#D8B97A"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.28"
-                        filter="url(#arrowGlowUniversal)"
-                        />
-                     <!-- glow inner -->
-                     <path
-                        d="M18 19 L36 35 L18 51"
-                        stroke="#D8B97A"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.22"
-                        filter="url(#arrowGlowUniversal)"
-                        />
-                     <!-- outer -->
-                     <path
-                        d="M27 14 L51 35 L27 56"
-                        stroke="#E7C987"
-                        stroke-width="2.4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                     <!-- inner -->
-                     <path
-                        d="M18 19 L36 35 L18 51"
-                        stroke="#E7C987"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                  </svg>
-               </button>
-               <div class="portfolio__player-wrap">
-                  <video id="player" class="portfolio__player" poster="img/poster.webp">
-                     <source class="portfolio__player-source" src="video.mp4" type="video/mp4">
-                  </video>
-                  <ul class="portfolio__descriptions-list">
-                     <li class="portfolio__descriptions-item">Разработал современный продающий интерфейс с акцентом на визуальное доверие, удобную навигацию и сильную подачу продукта.</li>
-                     <li class="portfolio__descriptions-item">Реализовал адаптивную frontend-разработку для стабильной и корректной работы сайта на всех устройствах</li>
-                     <li class="portfolio__descriptions-item">Продумал пользовательский сценарий и структуру блоков, что позволило повысить вовлечённость и улучшить конверсию.</li>
-                     <li class="portfolio__descriptions-item">Интегрировал необходимый функционал проекта: формы заявок, анимации, интерактивные элементы и административную логику.</li>
-                  </ul>
-               </div>
-               <button class="portfolio__controls portfolio__controls--right">
-                  <svg class="portfolio__right-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <filter id="arrowGlowGoldRight" x="-50%" y="-50%" width="200%" height="200%">
-                           <feGaussianBlur stdDeviation="1.4" result="blur"/>
-                        </filter>
-                     </defs>
-                     <!-- glow line -->
-                     <path
-                        d="M14 35 H50"
-                        stroke="#D8B97A"
-                        stroke-width="2.6"
-                        stroke-linecap="round"
-                        opacity="0.18"
-                        filter="url(#arrowGlowGoldRight)"
-                        />
-                     <!-- glow arrow head -->
-                     <path
-                        d="M41 28 L54 35 L41 42"
-                        stroke="#D8B97A"
-                        stroke-width="2.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.18"
-                        filter="url(#arrowGlowGoldRight)"
-                        />
-                     <!-- main line -->
-                     <path
-                        d="M14 35 H50"
-                        stroke="#E7C987"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        />
-                     <!-- main arrow head -->
-                     <path
-                        d="M41 28 L54 35 L41 42"
-                        stroke="#E7C987"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                  </svg>
-                  <svg class="portfolio__right-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <defs>
-                        <filter id="arrowGlowUniversal" x="-50%" y="-50%" width="200%" height="200%">
-                           <feGaussianBlur stdDeviation="2.5" result="blur"/>
-                        </filter>
-                     </defs>
-                     <!-- glow outer -->
-                     <path
-                        d="M27 14 L51 35 L27 56"
-                        stroke="#D8B97A"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.28"
-                        filter="url(#arrowGlowUniversal)"
-                        />
-                     <!-- glow inner -->
-                     <path
-                        d="M18 19 L36 35 L18 51"
-                        stroke="#D8B97A"
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        opacity="0.22"
-                        filter="url(#arrowGlowUniversal)"
-                        />
-                     <!-- outer -->
-                     <path
-                        d="M27 14 L51 35 L27 56"
-                        stroke="#E7C987"
-                        stroke-width="2.4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                     <!-- inner -->
-                     <path
-                        d="M18 19 L36 35 L18 51"
-                        stroke="#E7C987"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        />
-                  </svg>
-               </button>
-            </div>
-         </section>
+      <section id="portfolio" class="portfolio">
+   <h2 class="portfolio__title section--title">Примеры работ</h2>
+   <div class="portfolio__video-block">
+      <button class="portfolio__controls portfolio__controls--left" aria-label="Предыдущий проект">
+         <svg class="portfolio__left-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <filter id="arrowGlowGoldLeftMob" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.4" result="blur"/>
+               </filter>
+            </defs>
+            <!-- glow line -->
+            <path
+               d="M14 35 H50"
+               stroke="#D8B97A"
+               stroke-width="2.6"
+               stroke-linecap="round"
+               opacity="0.18"
+               filter="url(#arrowGlowGoldLeftMob)"
+            />
+            <!-- glow arrow head -->
+            <path
+               d="M41 28 L54 35 L41 42"
+               stroke="#D8B97A"
+               stroke-width="2.6"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.18"
+               filter="url(#arrowGlowGoldLeftMob)"
+            />
+            <!-- main line -->
+            <path
+               d="M14 35 H50"
+               stroke="#E7C987"
+               stroke-width="1.6"
+               stroke-linecap="round"
+            />
+            <!-- main arrow head -->
+            <path
+               d="M41 28 L54 35 L41 42"
+               stroke="#E7C987"
+               stroke-width="1.6"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </svg>
+         <svg class="portfolio__left-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <filter id="arrowGlowUniversalLeft" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur"/>
+               </filter>
+            </defs>
+            <!-- glow outer -->
+            <path
+               d="M27 14 L51 35 L27 56"
+               stroke="#D8B97A"
+               stroke-width="4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.28"
+               filter="url(#arrowGlowUniversalLeft)"
+            />
+            <!-- glow inner -->
+            <path
+               d="M18 19 L36 35 L18 51"
+               stroke="#D8B97A"
+               stroke-width="4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.22"
+               filter="url(#arrowGlowUniversalLeft)"
+            />
+            <!-- outer -->
+            <path
+               d="M27 14 L51 35 L27 56"
+               stroke="#E7C987"
+               stroke-width="2.4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+            <!-- inner -->
+            <path
+               d="M18 19 L36 35 L18 51"
+               stroke="#E7C987"
+               stroke-width="2.2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </svg>
+      </button>
+      <div class="portfolio__player-wrap">
+         <video id="player" class="portfolio__player" poster="img/poster.webp">
+            <source class="portfolio__player-source" src="video.mp4" type="video/mp4">
+         </video>
+         <ul class="portfolio__descriptions-list">
+            <li class="portfolio__descriptions-item">Разработал современный продающий интерфейс с акцентом на визуальное доверие, удобную навигацию и сильную подачу продукта.</li>
+            <li class="portfolio__descriptions-item">Реализовал адаптивную frontend-разработку для стабильной и корректной работы сайта на всех устройствах</li>
+            <li class="portfolio__descriptions-item">Продумал пользовательский сценарий и структуру блоков, что позволило повысить вовлечённость и улучшить конверсию.</li>
+            <li class="portfolio__descriptions-item">Интегрировал необходимый функционал проекта: формы заявок, анимации, интерактивные элементы и административную логику.</li>
+         </ul>
+      </div>
+      <button class="portfolio__controls portfolio__controls--right" aria-label="Следующий проект">
+         <svg class="portfolio__right-svg-mob" viewBox="12 24 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <filter id="arrowGlowGoldRightMobUnique" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.4" result="blur"/>
+               </filter>
+            </defs>
+            <!-- glow line -->
+            <path
+               d="M14 35 H50"
+               stroke="#D8B97A"
+               stroke-width="2.6"
+               stroke-linecap="round"
+               opacity="0.18"
+               filter="url(#arrowGlowGoldRightMobUnique)"
+            />
+            <!-- glow arrow head -->
+            <path
+               d="M41 28 L54 35 L41 42"
+               stroke="#D8B97A"
+               stroke-width="2.6"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.18"
+               filter="url(#arrowGlowGoldRightMobUnique)"
+            />
+            <!-- main line -->
+            <path
+               d="M14 35 H50"
+               stroke="#E7C987"
+               stroke-width="1.6"
+               stroke-linecap="round"
+            />
+            <!-- main arrow head -->
+            <path
+               d="M41 28 L54 35 L41 42"
+               stroke="#E7C987"
+               stroke-width="1.6"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </svg>
+         <svg class="portfolio__right-svg" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+               <filter id="arrowGlowUniversal" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur"/>
+               </filter>
+            </defs>
+            <!-- glow outer -->
+            <path
+               d="M27 14 L51 35 L27 56"
+               stroke="#D8B97A"
+               stroke-width="4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.28"
+               filter="url(#arrowGlowUniversal)"
+            />
+            <!-- glow inner -->
+            <path
+               d="M18 19 L36 35 L18 51"
+               stroke="#D8B97A"
+               stroke-width="4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               opacity="0.22"
+               filter="url(#arrowGlowUniversal)"
+            />
+            <!-- outer -->
+            <path
+               d="M27 14 L51 35 L27 56"
+               stroke="#E7C987"
+               stroke-width="2.4"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+            <!-- inner -->
+            <path
+               d="M18 19 L36 35 L18 51"
+               stroke="#E7C987"
+               stroke-width="2.2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </svg>
+      </button>
+   </div>
+</section>
          <section id="cta" class="cta">
             <h2 class="cta__title section--title">Готовы начать проект?</h2>
             <p class="cta__text">создадим что-то выдающееся вместе</p>
             <button class="cta-button open--popup">Связаться со мной</button>
          </section>
+         </main>
          <footer class="footer">
             <div class="footer__content">
                <div class="footer__content-autor">
                   <div class="footer__content-autor-wrap">
-                     <img class ="footer__content-autor-icon" src="img/footer-icon.png">
+                     <img class ="footer__content-autor-icon" src="img/footer-icon.png" alt="Логотип LuxDev">
                      <p class="footer__content-autor-title">Lux<span>Dev</span></p>
                   </div>
                </div>
@@ -416,22 +442,22 @@
                      </li>
                   </ul>
                </nav>
-               <div class="footer__content-contacts">
+               <address class="footer__content-contacts">
                   <div class="footer__content-contacts-wrap">
                      <div>
-                        <img class="footer__icon" src="img/mail-icon1.png">
+                        <img class="footer__icon" src="img/mail-icon1.png" alt="Иконка электронной почты">
                         <div>Ice2508@yandex.ru</div>
                      </div>
                      <div>
-                        <img class="footer__icon" src="img/vk-icon1.png">
+                        <img class="footer__icon" src="img/vk-icon1.png" alt="Иконка ВКонтакте">
                         <div>вконтакте</div>
                      </div>
                      <div>
-                        <img class="footer__icon" src="img/tg-icon1.png">
+                        <img class="footer__icon" src="img/tg-icon1.png" alt="Иконка Telegram">
                         <div>@ice2508</div>
                      </div>
                   </div>
-               </div>
+               </address>
             </div>
             <div class="footer__copyright">
                &#169; 2026 LuxDev. Все права защищены.

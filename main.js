@@ -13,8 +13,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log(aboutImg);
-    updateAboutImg(); 
-    window.addEventListener('resize', updateAboutImg);
     window.addEventListener('resize', updateArrowPosition);
     const starField = document.getElementById('star-field');
     let starCount;
@@ -236,14 +234,6 @@ function backPopup() {
   })
 }
 
-function updateAboutImg () {
-  if  (window.matchMedia('(max-width: 1110px)').matches) {
-      aboutImg.src = 'img/22-mob.webp';
-   } else {
-      aboutImg.src = 'img/22.webp';
-   }  
-}
-
 function mobileNavClick() {
   mobileNav.addEventListener('click', () => {
       mobileNavList.classList.add('header__mobile-nav-list--active');
@@ -260,30 +250,35 @@ function mobileNavClick() {
 }
 
 
-const videoBlock = document.querySelector('.plyr');
+
 
 function updateArrowPosition() {
+    const videoBlock = document.querySelector('.plyr');
+    
+    if (!videoBlock) return; 
+
     if (window.matchMedia('(max-width: 840px)').matches) {
         const videoHeight = videoBlock.offsetHeight;
         const topPosition = videoHeight + 32;
         leftControls.style.top = topPosition + 'px';
         rightControls.style.top = topPosition + 'px';
-        
-            leftControlsSvg.style.visibility = 'visible';
-            rightControlsSvg.style.visibility = 'visible';
-        
     } else {
         leftControls.style.top = '';
         rightControls.style.top = '';
-        leftControlsSvg.style.visibility = 'hidden';
-        rightControlsSvg.style.visibility = 'hidden';
     }
 }
 
-player.on('loadedmetadata', () => {
+// Изменения только здесь:
+player.on('ready', () => {
+    const videoBlock = document.querySelector('.plyr');
+    if (!videoBlock) return;
     updateArrowPosition();
-});
+    const resizeObserver = new ResizeObserver(() => {
+        updateArrowPosition();
+    });
 
+    resizeObserver.observe(videoBlock);
+});
 
 
 mobileNavClick();

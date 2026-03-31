@@ -51,6 +51,7 @@ button {
     cursor: pointer;
     background: none;
     color: inherit;
+    border: none;
 }
 
 body {
@@ -74,6 +75,18 @@ body::before {
     will-change: transform;
 }
 
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
+}
 
 /*попапы*/
 
@@ -147,6 +160,7 @@ body::before {
     border: none;
     background: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .popup-submit__close:hover {
@@ -355,6 +369,7 @@ body::before {
     position: relative;
     cursor: pointer;
     display: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__mobile-nav::before {
@@ -447,6 +462,7 @@ body::before {
     height: 100%;
     display: flex;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobile__nav-icon {
@@ -524,7 +540,7 @@ body::before {
     white-space: nowrap;
     text-decoration: none;
     color: #f6e6c1;
-
+    -webkit-tap-highlight-color: transparent;
     background: linear-gradient(180deg,
             #8a6532 0%,
             #5b3d1f 20%,
@@ -936,7 +952,7 @@ body::before {
 
 .portfolio__right-svg-mob,
 .portfolio__left-svg-mob {
-    visibility: hidden;
+    display: none;
     position: absolute;
 }
 
@@ -1146,7 +1162,7 @@ body::before {
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
+    -webkit-tap-highlight-color: transparent;
     color: #f6e6c1;
     margin-top: 60px;
     background:
@@ -1169,8 +1185,6 @@ body::before {
         0 0 24px rgba(255, 184, 77, 0.18),
         /* мягкий glow */
         0 6px 10px rgba(255, 196, 92, 0.18);
-    /* тёплый низ */
-
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }
@@ -1656,6 +1670,7 @@ body::before {
     .portfolio__left-svg-mob,
     .portfolio__right-svg-mob {
         width: 100%;
+        display: block;
     }
 
     .portfolio__left-svg-mob {
