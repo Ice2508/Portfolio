@@ -153,12 +153,15 @@ body::before {
 
 .popup-submit__close {
     position: absolute;
-    height: 38px;
-    width: 35px;
+    height: 36px;
+    width: 36px;
     top: -42px;
     right: -24px;
     font-size: 40px;
     font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background: none;
     user-select: none;
@@ -1048,6 +1051,7 @@ body::before {
 .portfolio__player-wrap .plyr__controls {
     display: flex;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .portfolio__player-wrap .plyr__progress__container {
@@ -1087,6 +1091,7 @@ body::before {
     align-items: center !important;
     justify-content: center !important;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .portfolio__player-wrap .plyr__control--overlaid svg {
@@ -1235,7 +1240,8 @@ body::before {
 .header__mobile-nav-close:active, 
 .popup-submit__close:active,
 .header__nav-item:active,
-.header__mobile-nav:active {
+.header__mobile-nav:active
+ {
     transform: translateY(-1px) scale(0.995);
     filter: brightness(1.4) saturate(1.3);
     box-shadow:
@@ -1246,7 +1252,9 @@ body::before {
     transition: all 0.2s ease;
 }
 
-.portfolio__controls:active {
+.portfolio__controls:active, 
+.plyr__control--overlaid:active
+ {
     filter: brightness(1.4) saturate(1.3);
     box-shadow:
         inset 0 2px 15px rgba(255, 230, 180, 0.5),
