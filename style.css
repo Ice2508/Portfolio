@@ -153,6 +153,8 @@ body::before {
 
 .popup-submit__close {
     position: absolute;
+    height: 38px;
+    width: 35px;
     top: -42px;
     right: -24px;
     font-size: 40px;
@@ -230,6 +232,7 @@ body::before {
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .popup-submit__btn::before,
@@ -1225,12 +1228,14 @@ body::before {
     filter: brightness(1.2);
 }
 
+/*настройка актив*/
+
 .cta-button:active,
 .header__button:active, 
 .header__mobile-nav-close:active, 
 .popup-submit__close:active,
 .header__nav-item:active,
-.portfolio__controls:active {
+.header__mobile-nav:active {
     transform: translateY(-1px) scale(0.995);
     filter: brightness(1.4) saturate(1.3);
     box-shadow:
@@ -1240,6 +1245,18 @@ body::before {
         0 10px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease;
 }
+
+.portfolio__controls:active {
+    filter: brightness(1.4) saturate(1.3);
+    box-shadow:
+        inset 0 2px 15px rgba(255, 230, 180, 0.5),
+        inset 0 -8px 18px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(255, 214, 120, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+/**/
 
 .cta__title {
     margin-bottom: 0;
