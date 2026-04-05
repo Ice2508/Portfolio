@@ -1653,7 +1653,7 @@ body::before {
         min-height: auto;
     }
 
-    .cta-button {
+    .cta__button {
         min-width: 300px;
         height: 64px;
         padding: 0 32px;
@@ -1661,7 +1661,7 @@ body::before {
         left: calc(50% - 150px);
     }
 
-    .cta-button::before {
+    .cta__button::before {
         top: 4px;
         height: 36%;
         left: 16px;
@@ -1919,7 +1919,7 @@ body::before {
         width: 35px;
     }
 
-    .cta-button {
+    .cta__button {
         min-width: 250px;
         padding: 0 18px;
         width: 250px;
