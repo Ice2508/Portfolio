@@ -1832,7 +1832,7 @@ body::before {
 
     .portfolio__descriptions-list {
         padding: 30px 18px 0;
-        height: 500px;
+        height: 630px;
     }
 
     .cta__title {
@@ -1919,6 +1919,10 @@ body::before {
         width: 35px;
     }
 
+    .portfolio__descriptions-list {
+        height: 950px;
+    }
+
     .cta__button {
         min-width: 250px;
         padding: 0 18px;
@@ -1960,7 +1964,7 @@ body::before {
         }
 
         .portfolio__descriptions-list {
-            height: 554px;
+            height: 1100px;
         }
 
         .cta__title {
