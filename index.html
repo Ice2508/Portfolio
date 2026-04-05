@@ -49,9 +49,9 @@
             <address class="header-mobile-nav__social">
                <p>я в соц сетях:</p>
                <div class="header-mobile-nav__social-wrap">
-                  <img class="header-mobile-nav__social-icon" src="img/vk-icon1.png" alt="Иконка ВКонтакте">
-                  <img class="header-mobile-nav__social-icon" src="img/tg-icon1.png" alt="Иконка Telegram">
-                  <img class="header-mobile-nav__social-icon" src="img/mail-icon1.png" alt="Иконка электронной почты">
+                  <img class="header-mobile-nav__social-icon" src="img/vk-icon1.webp" alt="Иконка ВКонтакте">
+                  <img class="header-mobile-nav__social-icon" src="img/tg-icon1.webp" alt="Иконка Telegram">
+                  <img class="header-mobile-nav__social-icon" src="img/mail-icon1.webp" alt="Иконка электронной почты">
                </div>
             </address>
          </nav>
@@ -66,7 +66,7 @@
             <input id="contacts" class="popup-submit__input" name="contacts" type="text" placeholder="контактные данные">
              <label for="message" class="visually-hidden">Сообщение</label>
             <textarea id="message" class="popup-submit__textarea" name="message" placeholder="сообщение"></textarea>
-            <button class="popup-submit__btn" type="submit">отправить</button>
+            <button class="btn-gold popup-submit__btn" type="submit">отправить</button>
          </form>
       </div>
       <div id="wrap" class="wrap-animation">
@@ -104,7 +104,7 @@
                   </li>
                </ul>
             </nav>
-            <button class="header__button open--popup">Связаться</button>
+            <button class="btn-gold header__button open--popup">Связаться</button>
          </header>
          <main class="main">
          <section class="hero">
@@ -130,16 +130,16 @@
                <img src="img/html-icon3.webp" alt="HTML" class="stack__icon">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/css-icon1.png" alt="CSS" class="stack__icon">
+               <img src="img/css-icon1.webp" alt="CSS" class="stack__icon">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/js-icon1.png" alt="JavaScript" class="stack__icon stack__icon--mod">
+               <img src="img/js-icon1.webp" alt="JavaScript" class="stack__icon stack__icon--mod">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/react-icon1.png" alt="React" class="stack__icon stack__icon--mod">
+               <img src="img/react-icon1.webp" alt="React" class="stack__icon stack__icon--mod">
             </div>
             <div class="stack__icon-wrap">
-               <img src="img/strapi-icon1.png" alt="Strapi" class="stack__icon">
+               <img src="img/strapi-icon1.webp" alt="Strapi" class="stack__icon">
             </div>
          </section>
          <section id="about" class="about">
@@ -157,10 +157,8 @@
                <div class="about__img-wrap about--block">
                   <div class="about__decor2"></div>
                   <picture >
-   <!-- Если экран меньше 768px, браузер скачает только мобильную версию -->
+ 
    <source media="(max-width: 1109px)" srcset="img/22-mob.webp">
-   
-   <!-- Если экран больше, загрузится десктопная. Она же служит фоллбэком (базой) -->
    <img class="about__img" src="img/22.webp" alt="">
 </picture>
                   
@@ -315,7 +313,7 @@
       </button>
       <div class="portfolio__player-wrap">
          <video id="player" class="portfolio__player" poster="img/poster.webp">
-            <source class="portfolio__player-source" src="video.mp4" type="video/mp4">
+            <source class="portfolio__player-source" src="video/work1.mp4" type="video/mp4">
          </video>
          <ul class="portfolio__descriptions-list">
             <li class="portfolio__descriptions-item">Разработал современный продающий интерфейс с акцентом на визуальное доверие, удобную навигацию и сильную подачу продукта.</li>
@@ -415,7 +413,7 @@
          <section id="cta" class="cta">
             <h2 class="cta__title section--title">Готовы начать проект?</h2>
             <p class="cta__text">создадим что-то выдающееся вместе</p>
-            <button class="cta-button open--popup">Связаться со мной</button>
+            <button class="btn-gold cta__button open--popup">Связаться со мной</button>
          </section>
          </main>
          <footer class="footer">
@@ -444,18 +442,18 @@
                </nav>
                <address class="footer__content-contacts">
                   <div class="footer__content-contacts-wrap">
-                     <div>
-                        <img class="footer__icon" src="img/mail-icon1.png" alt="Иконка электронной почты">
+                     <a href="mailto:Ice2508@yandex.ru">
+                        <img class="footer__icon" src="img/mail-icon1.webp" alt="Иконка электронной почты">
                         <div>Ice2508@yandex.ru</div>
-                     </div>
-                     <div>
-                        <img class="footer__icon" src="img/vk-icon1.png" alt="Иконка ВКонтакте">
+                     </a>
+                     <a href="https://vk.com/id855621570">
+                        <img class="footer__icon" src="img/vk-icon1.webp" alt="Иконка ВКонтакте">
                         <div>вконтакте</div>
-                     </div>
-                     <div>
-                        <img class="footer__icon" src="img/tg-icon1.png" alt="Иконка Telegram">
+                     </a>
+                     <a href="https://t.me/ice2508">
+                        <img class="footer__icon" src="img/tg-icon1.webp" alt="Иконка Telegram">
                         <div>@ice2508</div>
-                     </div>
+                     </a>
                   </div>
                </address>
             </div>

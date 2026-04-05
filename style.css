@@ -88,6 +88,47 @@ body::before {
    border: 0;
 }
 
+/* ОБЩИЙ СТИЛЬ ДЛЯ ВСЕХ ЗОЛОТЫХ КНОПОК */
+
+.btn-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #f6e6c1;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+     background: linear-gradient(180deg, #8d6834 0%, #5d3e1f 18%, #2f1d12 42%, #1a120d 65%, #0f0a07 100%);
+    border: 1px solid rgba(255, 214, 120, 0.45);
+    box-shadow:
+        inset 0 1px 5px rgba(255, 221, 153, 0.2),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gold::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    right: 10px;
+    height: 35%;
+    background: linear-gradient(180deg, rgba(255, 231, 180, 0.3) 0%, rgba(255, 214, 120, 0) 100%);
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 184, 77, 0.2);
+}
+
 /*попапы*/
 
 .popup-overlay {
@@ -210,63 +251,17 @@ body::before {
 .popup-submit__btn,
 .close,
 .back {
-    position: relative;
-    display: flex;
-    align-self: flex-end;
-    align-items: center;
-    justify-content: center;
+   align-self: flex-end;
     width: 50%;
     height: 40px;
-    padding: 0 30px;
-    border: 1px solid rgba(255, 214, 120, 0.45);
-    font-size: 18px;
-    /* Оптимально для формы */
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #f6e6c1;
-    background: linear-gradient(180deg, #8d6834 0%, #5d3e1f 18%, #2f1d12 42%, #1a120d 65%, #0f0a07 100%);
     border-radius: 6px;
-    box-shadow:
-        inset 0 1px 5px rgba(255, 221, 153, 0.2),
-        inset 0 -4px 10px rgba(0, 0, 0, 0.4),
-        0 5px 15px rgba(0, 0, 0, 0.3);
-
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.popup-submit__btn::before,
-.close::before,
-.back::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 10px;
-    right: 10px;
-    height: 35%;
-    background: linear-gradient(180deg, rgba(255, 231, 180, 0.3) 0%, rgba(255, 214, 120, 0) 100%);
-    filter: blur(1px);
-    pointer-events: none;
-}
-
-.popup-submit__btn:hover,
-.close:hover,
-.back::before {
-    transform: translateY(-2px);
-    filter: brightness(1.2);
-    box-shadow:
-        inset 0 1px 8px rgba(255, 230, 180, 0.3),
-        0 8px 20px rgba(0, 0, 0, 0.4),
-        0 0 15px rgba(255, 184, 77, 0.2);
+    font-size: 18px; 
 }
 
 .popup-submit__btn:active,
 .close:active,
 .back:active {
-    transform: translateY(0);
+    transform: translateY(-2px);
     filter: brightness(1.4);
 }
 
@@ -534,63 +529,11 @@ body::before {
 }
 
 .header__button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
     padding: 12px 18px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 214, 120, 0.38);
-    line-height: 1;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-decoration: none;
-    color: #f6e6c1;
-    -webkit-tap-highlight-color: transparent;
-    background: linear-gradient(180deg,
-            #8a6532 0%,
-            #5b3d1f 20%,
-            #2e1d12 48%,
-            #17100b 72%,
-            #0d0906 100%);
-
-    box-shadow:
-        inset 0 1px 4px rgba(255, 221, 153, 0.18),
-        inset 0 -3px 8px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 215, 130, 0.08),
-        0 5px 12px rgba(0, 0, 0, 0.38),
-        0 0 12px rgba(255, 184, 77, 0.12),
-        0 2px 5px rgba(255, 196, 92, 0.1);
-
-    overflow: hidden;
-    cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        filter 0.3s ease;
+    font-size: 15px;
 }
 
-.header__button::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 7px;
-    right: 7px;
-    height: 38%;
-    border-radius: 999px;
-
-    background: linear-gradient(180deg,
-            rgba(255, 231, 180, 0.38) 0%,
-            rgba(255, 214, 120, 0.12) 48%,
-            rgba(255, 214, 120, 0) 100%);
-
-    filter: blur(0.6px);
-    pointer-events: none;
-}
 
 /*hero секция*/
 
@@ -1159,83 +1102,19 @@ body::before {
     margin-top: var(--section-margin);
 }
 
-.cta-button {
+.cta__button {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    left: calc(50% - 210px);
+    margin-top: 60px;
     min-width: 420px;
     height: 86px;
-    padding: 0 48px;
-    left: calc(50% - 210px);
     border-radius: 99px;
-    border: 1px solid rgba(255, 214, 120, 0.45);
     font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    -webkit-tap-highlight-color: transparent;
-    color: #f6e6c1;
-    margin-top: 60px;
-    background:
-        linear-gradient(180deg,
-            #8d6834 0%,
-            #5d3e1f 18%,
-            #2f1d12 42%,
-            #1a120d 65%,
-            #0f0a07 100%);
-
-    box-shadow:
-        inset 0 2px 10px rgba(255, 221, 153, 0.22),
-        /* внутренний верхний блик */
-        inset 0 -8px 18px rgba(0, 0, 0, 0.55),
-        /* затемнение снизу */
-        0 0 0 1px rgba(255, 215, 130, 0.12),
-        /* тонкий внешний кант */
-        0 12px 24px rgba(0, 0, 0, 0.45),
-        /* глубина */
-        0 0 24px rgba(255, 184, 77, 0.18),
-        /* мягкий glow */
-        0 6px 10px rgba(255, 196, 92, 0.18);
-    overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
-}
-
-.cta-button::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 20px;
-    right: 20px;
-    height: 38%;
-
-    border-radius: 999px;
-
-    background: linear-gradient(180deg,
-            rgba(255, 231, 180, 0.55) 0%,
-            rgba(255, 214, 120, 0.18) 45%,
-            rgba(255, 214, 120, 0) 100%);
-
-    filter: blur(1px);
-    pointer-events: none;
-}
-
-.cta-button:hover,
-.header__button:hover {
-    transform: translateY(-2px);
-    box-shadow:
-        inset 0 2px 15px rgba(255, 230, 180, 0.4),
-        inset 0 -8px 18px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 215, 130, 0.4),
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        0 0 35px rgba(255, 184, 77, 0.35),
-        0 6px 15px rgba(255, 196, 92, 0.3);
-    filter: brightness(1.2);
 }
 
 /*настройка актив*/
 
-.cta-button:active,
+.cta__button:active,
 .header__button:active, 
 .header__mobile-nav-close:active, 
 .popup-submit__close:active,
@@ -1346,7 +1225,7 @@ body::before {
     width: 230px;
 }
 
-.footer__content-contacts-wrap div {
+.footer__content-contacts-wrap a {
     display: flex;
     gap: 8px;
     align-items: center;
