@@ -1373,6 +1373,7 @@ body::before {
 
     .portfolio__player-wrap {
         width: 82%;
+        height: 800px;
     }
 
     .footer__content {
@@ -1442,6 +1443,11 @@ body::before {
 
     .portfolio__player-wrap {
         width: 100%;
+        height: 830px;
+    }
+
+    .portfolio__descriptions-list {
+        margin-bottom: 0;
     }
 
     .footer__content-autor {
@@ -1464,6 +1470,11 @@ body::before {
 
     .hero__subtitle {
         font-size: 32px;
+    }
+
+     .portfolio__player-wrap {
+        width: 82%;
+        height: 880px;
     }
 
     .footer__content {
@@ -1613,10 +1624,11 @@ body::before {
 
     .portfolio__player-wrap {
         width: 83vw;
+        height: 880px;
     }
 
     .portfolio__descriptions-list {
-        padding-top: 30px;
+        margin-top: 50px;
     }
 
 }
@@ -1670,6 +1682,7 @@ body::before {
 
     .portfolio__player-wrap {
         width: calc(100vw - 60px);
+        height: 820px;
     }
 
     .portfolio__controls--left {
@@ -1777,10 +1790,10 @@ body::before {
     }
 
     .portfolio__player-wrap {
-        height: 800px;
-    }
+        height: 860px;
+    } 
 
-    .cta__text {
+   .cta__text {
         font-size: 24px;
     }
 }
@@ -1830,10 +1843,7 @@ body::before {
         width: 100%;
     }
 
-    .portfolio__descriptions-list {
-        padding: 30px 18px 0;
-        height: 630px;
-    }
+  
 
     .cta__title {
         font-size: 32px;
@@ -1919,8 +1929,8 @@ body::before {
         width: 35px;
     }
 
-    .portfolio__descriptions-list {
-        height: 950px;
+    .portfolio__player-wrap {
+        height: 940px;
     }
 
     .cta__button {
@@ -1963,8 +1973,12 @@ body::before {
             gap: 9px;
         }
 
-        .portfolio__descriptions-list {
-            height: 1100px;
+        .portfolio__player-wrap {
+            height: 970px;
+        }
+
+        .plyr {
+            height: 320px;
         }
 
         .cta__title {
