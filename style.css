@@ -1647,13 +1647,8 @@ body::before {
         height: 380px;
     }
 
-    .hero__subtitle-arc {
-        display: flex;
-        font-size: 30px;
-    }
-
     .hero__subtitle {
-        display: none;
+        margin-bottom: 120px;
     }
 
     .stack {
@@ -1723,6 +1718,18 @@ body::before {
 
     .footer__content-contacts-wrap {
         width: 155px;
+    }
+}
+
+
+@media (max-width: 697px) { 
+    .hero__subtitle-arc {
+        display: flex;
+        font-size: 30px;
+    }
+
+    .hero__subtitle {
+        display: none;
     }
 }
 
